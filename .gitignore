@@ -1,55 +1,11 @@
-# Prerequisites
-*.d
+CC = gcc
+CFLAGS = -Wall -Wextra
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+all: shell
 
-# Linker output
-*.ilk
-*.map
-*.exp
+shell: shell.c
+	$(CC) $(CFLAGS) shell.c -o shell
 
-# Precompiled Headers
-*.gch
-*.pch
+clean:
+	rm -f shell *.o
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
-
-# debug information files
-*.dwo
